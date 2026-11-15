@@ -1,61 +1,69 @@
-<html>
-
-<!--
-
-use:
-Classes
-Divs
-
-
-
-
-plan: 
-THE WEBSITE IS ABOUT YOU
-its a showcase of your skills, and a place to show off your work.
-need a good background
-need to use some other kind of font 
-
-THIS PAGE: 
- professional summary about yourself. Highlight
-your career background, interests, and future goals.
- -->
-
-
+<!DOCTYPE html>
+<!-- HTML5 document. The language helps screen readers pronounce the content. -->
+<html lang="en-GB">
 <head>
-    <link rel="stylesheet" href="StyleSheet.css">
-    <title> Home </title>
     <meta charset="UTF-8">
+    <!-- This lets the layout adapt to phones instead of displaying a scaled-down desktop page. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Daniel's Business and Information Technology student portfolio: skills, projects and a restaurant digital transformation demonstration.">
+    <title>Daniel | Home</title>
+    <link rel="stylesheet" href="StyleSheet.css">
 </head>
-
 <body>
 
-,<header>
-    <h1>NEED A TITLE</h1>
-<nav>
-    <a href="Home.html"> Home </a>
-    <a href="BusinessShowcase.html"> Business Showcase </a>
-    <a href="Contact.html"> Contacts </a>
-    <a href="ProblemSolving.html"> Problem Solving </a>
-    <a href="Skills.html"> Skills </a>
-</nav>
-
-</header>
-<main>
-
-
-    <div>
-    <section>
-        <h2>About Me</h2>
-        <p>i am a Business IT student and this is my website, my backgrounds are in IT and Computer Science and i now do Business IT after a realigment after my first year of Computer Science</p>
-
-    </section>
-</div>
+    <!-- The header and navigation build on the structure of the original home page. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <nav class="site-nav" aria-label="Main navigation">
+                <!-- aria-current identifies the page currently being viewed. -->
+                <a href="Home.html" aria-current="page">Home</a>
+                <a href="BusinessShowcase.html">Business Showcase</a>
+                <a href="Contact.html">Contact</a>
+                <a href="ProblemSolving.html">Problem Solving</a>
+                <a href="Skills.html">Skills</a>
+            </nav>
+        </div>
+    </header>
 
 
 
-</main>
+    <main id="main-content" class="home-main">
+        <div class="container">
+            <!-- One main heading introduces the person; detailed projects have their own page. -->
+            <section class="introduction" aria-labelledby="intro-title">
+                <p class="eyebrow">Business &amp; Information Technology</p>
+                    <h1 id="intro-title">Daniel Ratcliffe.</h1>
+                <p class="intro-subtitle">Exploring where business, technology and data.</p>
 
+
+
+                <!-- This short summary meets the home-page brief without repeating a full CV. -->
+                <section class="about-me" aria-labelledby="about-title">
+                    <h2 id="about-title">About me</h2>
+                    <p>I’m a Business and Information Technology student at the University of Salford,
+                        building on a previous year studying Computer Science. My interests include
+                        data analysis, web development and aviation technology. I’m developing the
+                        skills to help organisations solve practical problems through technology.</p>
+                </section>
+
+
+
+
+                <!-- These are links styled as buttons because they navigate to other pages. -->
+                <div class="intro-actions">
+                    <a class="button button-primary" href="BusinessShowcase.html">Explore my projects <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="Contact.html">Get in touch</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- The flexible page layout keeps this footer low on short pages without covering content. -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Daniel. Personal portfolio.</p>
+            <p>University of Salford <span aria-hidden="true">/</span> Business &amp; IT</p>
+        </div>
+    </footer>
 </body>
 </html>
