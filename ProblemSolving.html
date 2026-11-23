@@ -27,66 +27,462 @@ database required).
 ▪ Consideration of privacy, security, and data
 protection requirements, such as GDPR and
 cookie consent reminder.
+
+not sure if all that will be done but will try to do as much as possible.
     -->
-    
 <!DOCTYPE html>
 <html lang="en-GB">
 
 <head>
     <meta charset="UTF-8">
 
-    <!-- Allows the layout to adapt to different screen sizes. -->
+    <!-- Allows the page to adapt to mobile and desktop screens. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Change the description and browser-tab title for each page. -->
-    <meta name="description" content="PAGE DESCRIPTION">
-    <title>Daniel | PAGE NAME</title>
+    <meta name="description"
+          content="A fictional pizza restaurant prototype demonstrating how web technologies can support digital transformation.">
 
-    <!-- All five pages share the same stylesheet. -->
+    <title>Daniel | Problem Solving</title>
+
+    <!-- Reuses the portfolio's shared layout and styling. -->
     <link rel="stylesheet" href="StyleSheet.css">
 
-    <!-- Loads the JavaScript without blocking the HTML from being read. -->
+    <!-- Runs after the HTML has been parsed.
+         We will add the restaurant form functionality in a later step. -->
     <script src="Javascript.js" defer></script>
 </head>
 
 <body>
 
-    <!-- SHARED HEADER AND NAVIGATION -->
+    <!-- PORTFOLIO NAVIGATION
+         Problem Solving is highlighted as the current page. -->
     <header class="site-header">
         <div class="container header-inner">
-
             <nav class="site-nav" aria-label="Main navigation">
-                <!-- Add aria-current="page" to this page's link only. -->
                 <a href="index.html">Home</a>
                 <a href="BusinessShowcase.html">Business Showcase</a>
                 <a href="Contact.html">Contact</a>
-                <a href="ProblemSolving.html">Problem Solving</a>
+                <a href="ProblemSolving.html" aria-current="page">
+                    Problem Solving
+                </a>
                 <a href="Skills.html">Skills</a>
             </nav>
-
         </div>
     </header>
 
-    <!-- PAGE CONTENT
-         Replace this area with content specific to each page.
-         Keep the shared header and footer consistent. -->
     <main id="main-content" class="page-main">
         <div class="container">
 
-            <h1>PAGE NAME</h1>
-            <p>A short introduction to this page.</p>
+            <h1>Problem Solving</h1>
 
-            <!-- Add sections below as needed.
-                 Use h2 headings for sections beneath the main h1. -->
-            <section aria-labelledby="section-one-title">
-                <h2 id="section-one-title">SECTION HEADING</h2>
-                <p>Add the content for this section here.</p>
+            <!-- BUSINESS CONTEXT
+                 Explains the fictional business need and proposed solution. -->
+            <section aria-labelledby="business-context-title">
+                <h2 id="business-context-title">
+                    Digital transformation: Brick Oven Pizza
+                </h2>
+
+                <p>
+                    Brick Oven Pizza is a fictional local restaurant that
+                    currently relies on telephone enquiries and printed
+                    menus. Customers have limited access to menu information
+                    online, while staff spend time answering routine
+                    questions and taking table requests by phone.
+                </p>
+
+                <p>
+                    Acting as the restaurant’s Chief Technology Officer,
+                    I am developing a web prototype that brings its menu,
+                    offers and contact information together. A booking-request
+                    form will allow customers to prepare an email containing
+                    their preferred date, time and party size.
+                </p>
+
+                <p>
+                    The proposed solution aims to improve customer
+                    engagement, make information easier to access and
+                    reduce the staff time spent collecting booking details.
+                </p>
+
+                <p>
+                    <strong>Demonstration only:</strong>
+                    this restaurant is fictional. The prototype will not
+                    process payments or confirm real reservations.
+                </p>
             </section>
+
+            <!-- RESTAURANT DEMONSTRATION
+                 Step 2: add the restaurant introduction and section navigation.
+                 Later steps: add the menu, offer, form and contact information.
+                 Everything stays inside this page. -->
+            <!-- RESTAURANT DEMONSTRATION
+     This navigation links to sections within the same HTML page. -->
+<div class="restaurant-demo">
+
+    <header class="restaurant-header">
+        <h2 class="restaurant-name">Brick Oven Pizza</h2>
+
+        <nav class="restaurant-nav" aria-label="Restaurant navigation">
+            <a href="#restaurant-menu">Menu</a>
+            <a href="#restaurant-offers">Offers</a>
+            <a href="#restaurant-booking">Request a table</a>
+            <a href="#restaurant-contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Opening section introduces the restaurant and its main action. -->
+    <section class="restaurant-hero" aria-labelledby="restaurant-welcome">
+        <p class="restaurant-label">Your local pizza place</p>
+
+        <h2 id="restaurant-welcome">
+            Good pizza. Good company.
+        </h2>
+
+        <p>
+            Classic favourites, vegetarian options and a welcoming
+            place to catch up. Explore our menu and plan your next visit.
+        </p>
+
+        <a class="button button-primary" href="#restaurant-menu">
+            Explore the menu
+        </a>
+
+        <p class="restaurant-demo-note">
+            Fictional restaurant — student project demonstration.
+        </p>
+    </section>
+
+ <!-- MENU: Each pizza has an image, description and individual price. -->
+<section id="restaurant-menu"
+         class="restaurant-section"
+         aria-labelledby="restaurant-menu-title">
+
+    <h2 id="restaurant-menu-title">Our menu</h2>
+
+    <p>
+        Four favourites, freshly baked. All pizzas are 12 inches,
+        and the prices below are per pizza.
+    </p>
+
+    <div class="restaurant-menu-grid">
+
+        <!-- Image paths are relative to this HTML file. -->
+        <article class="restaurant-menu-item">
+            <img
+                class="restaurant-food-image"
+                src="images/margherita.jpg"
+                alt="Margherita pizza with tomato, mozzarella and basil"
+                width="1200"
+                height="900"
+                loading="lazy">
+
+            <h3>Margherita</h3>
+            <p class="restaurant-dietary">Vegetarian</p>
+            <p>
+                Tomato sauce, vegetarian mozzarella and fresh basil.
+                A simple classic.
+            </p>
+            <p class="restaurant-price">£9.50</p>
+        </article>
+
+        <article class="restaurant-menu-item">
+            <img
+                class="restaurant-food-image"
+                src="images/pepperoni.jpg"
+                alt="A slice of pepperoni pizza with melted cheese"
+                width="1200"
+                height="900"
+                loading="lazy">
+
+            <h3>Pepperoni</h3>
+            <p>
+                Tomato sauce, mozzarella, pepperoni and a sprinkle
+                of oregano.
+            </p>
+            <p class="restaurant-price">£11.50</p>
+        </article>
+
+        <article class="restaurant-menu-item">
+            <img
+                class="restaurant-food-image"
+                src="images/garden-favourite.jpg"
+                alt="Vegetable pizza topped with peppers, red onion and olives"
+                width="1200"
+                height="900"
+                loading="lazy">
+
+            <h3>Garden Favourite</h3>
+            <p class="restaurant-dietary">Vegetarian</p>
+            <p>
+                Tomato sauce, vegetarian mozzarella, mushrooms,
+                peppers, red onion and olives.
+            </p>
+            <p class="restaurant-price">£11.00</p>
+        </article>
+
+        <article class="restaurant-menu-item">
+            <img
+                class="restaurant-food-image"
+                src="images/bbq-chicken.jpg"
+                alt="Barbecue chicken pizza topped with cheese and onions"
+                width="1200"
+                height="900"
+                loading="lazy">
+
+            <h3>BBQ Chicken</h3>
+            <p>
+                Barbecue sauce, mozzarella, chicken, red onion
+                and sweetcorn.
+            </p>
+            <p class="restaurant-price">£12.00</p>
+        </article>
+
+    </div>
+
+    <p class="restaurant-menu-note">
+        <strong>Allergy information:</strong>
+        Please speak to the restaurant team about ingredients and allergens
+        before ordering. Vegetarian dishes are not necessarily allergen-free.
+    </p>
+
+    <p class="restaurant-menu-note">
+        Images are AI-generated illustrations for this fictional restaurant.
+    </p>
+
+</section>
+
+<!-- OFFERS: Keep the price, conditions and booking link together. -->
+<section id="restaurant-offers"
+         class="restaurant-section"
+         aria-labelledby="restaurant-offers-title">
+
+    <h2 id="restaurant-offers-title">Offers</h2>
+
+    <div class="restaurant-offer">
+
+        <div class="restaurant-offer-layout">
+
+            <!-- Reuse a menu image rather than requiring another download. -->
+            <img
+                class="restaurant-food-image"
+                src="images/pepperoni.jpg"
+                alt="A slice of pepperoni pizza, one of the options in the two-pizza offer"
+                width="1200"
+                height="900"
+                loading="lazy">
+
+            <div>
+                <h3>Pizza for two — £18</h3>
+
+                <p>
+                    Make it a midweek catch-up. Choose any two
+                    12-inch pizzas from our menu for £18.
+                </p>
+
+                <p>
+                    <strong>Available:</strong>
+                    Monday to Thursday, 5pm–7pm.
+                </p>
+
+                <p>
+                    Dine-in only. Includes two pizzas.
+                    Drinks and extra toppings cost extra.
+                    Cannot be combined with other offers.
+                </p>
+
+                <!-- This link moves to the existing booking form. -->
+                <a class="button button-primary"
+                   href="#restaurant-booking">
+                    Request a table
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ <!-- Booking request: JavaScript will turn these details into an email. -->
+<section id="restaurant-booking"
+         class="restaurant-section"
+         aria-labelledby="restaurant-booking-title">
+
+    <h2 id="restaurant-booking-title">Request a table</h2>
+
+    <p>
+        Planning a visit? Complete the form below to prepare a booking
+        request. Your booking is only confirmed when the restaurant replies.
+    </p>
+
+    <p id="booking-demo-note">
+        This is a fictional restaurant for a student project.
+        Please use fictional details when testing the form.
+    </p>
+
+    <form id="booking-form" aria-describedby="booking-demo-note">
+
+        <!-- Each label connects to its input using matching for and id values. -->
+        <div class="booking-field">
+            <label for="booking-name">Name (required)</label>
+            <input
+                type="text"
+                id="booking-name"
+                name="customerName"
+                autocomplete="name"
+                maxlength="100"
+                required>
+        </div>
+
+        <div class="booking-field">
+            <label for="booking-email">Email address (required)</label>
+            <input
+                type="email"
+                id="booking-email"
+                name="customerEmail"
+                autocomplete="email"
+                maxlength="254"
+                required>
+        </div>
+
+        <!-- Native date and time inputs provide browser-supported controls. -->
+        <div class="booking-field">
+            <label for="booking-date">Preferred date (required)</label>
+            <input
+                type="date"
+                id="booking-date"
+                name="bookingDate"
+                required>
+        </div>
+
+        <div class="booking-field">
+            <label for="booking-time">Preferred time (required)</label>
+            <input
+                type="time"
+                id="booking-time"
+                name="bookingTime"
+                required>
+        </div>
+
+        <div class="booking-field">
+            <label for="booking-guests">Number of guests (required)</label>
+            <select id="booking-guests" name="guestCount" required>
+                <option value="">Select the number of guests</option>
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+            </select>
+        </div>
+
+        <div class="booking-field">
+            <label for="booking-message">Additional message (optional)</label>
+            <textarea
+                id="booking-message"
+                name="customerMessage"
+                rows="4"
+                maxlength="500"
+                aria-describedby="booking-message-help"></textarea>
+
+            <p id="booking-message-help" class="booking-help">
+                Maximum 500 characters. Do not include sensitive personal information.
+            </p>
+        </div>
+
+<p class="booking-help">
+    Prepare an email containing your booking request and review the preview.
+    An email application must be configured to open the draft.
+    This demonstration uses a fictional address, so please do not send it.
+</p>
+
+        <!-- Disabled temporarily until the JavaScript handler is added. -->
+        <button
+            type="submit"
+            id="booking-submit"
+            class="button button-primary"
+            disabled>
+            Prepare booking email
+        </button>
+
+        <!-- JavaScript will display feedback here for screen readers and other users. -->
+        <p id="booking-status" role="status"></p>
+
+    </form>
+</section>
+
+<!-- RESTAURANT CONTACT
+     The ID matches the Contact link in the restaurant navigation. -->
+<section id="restaurant-contact"
+         class="restaurant-section"
+         aria-labelledby="restaurant-contact-title">
+
+    <h2 id="restaurant-contact-title">Contact and opening hours</h2>
+
+    <p>
+        Planning a visit or have a question?
+        Find our example contact details and opening hours below.
+    </p>
+
+    <!-- These details belong to the fictional restaurant demonstration. -->
+    <h3>Find us</h3>
+
+    <address>
+        Brick Oven Pizza<br>
+        12 Example Street<br>
+        Salford
+    </address>
+
+    <h3>Email us</h3>
+
+    <!-- Use the same fictional address as the booking-form JavaScript.
+         The existing contact-address class allows long addresses to wrap. -->
+    <p class="contact-address">
+        <a href="mailto:bookings@brickovenpizza.example.com">
+            bookings@brickovenpizza.example.com
+        </a>
+    </p>
+
+    <p class="restaurant-demo-note">
+        This restaurant, address and email are fictional.
+        The email address is not monitored and cannot accept real bookings.
+    </p>
+
+    <h3>Opening hours</h3>
+
+    <p>Monday to Sunday: 5pm–10pm.</p>
+
+    <h3>Follow us</h3>
+
+    <!-- Working demonstration links to the platforms.
+         These do not claim that real restaurant profiles exist. -->
+    <ul>
+        <li>
+            <a href="https://www.facebook.com/">
+                Facebook — demonstration link
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/">
+                Instagram — demonstration link
+            </a>
+        </li>
+    </ul>
+
+    <p class="restaurant-demo-note">
+        These demonstration links open the social media platforms'
+        homepages. Brick Oven Pizza has no real social media accounts.
+    </p>
+
+</section>
+
+</div>
 
         </div>
     </main>
 
-    <!-- SHARED FOOTER -->
+    <!-- SHARED PORTFOLIO FOOTER -->
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>&copy; 2026 Daniel. Personal portfolio.</p>

@@ -393,3 +393,419 @@ textarea:focus-visible {
 .skill-card > :last-child {
     margin-bottom: 0;
 }
+
+/* RESTAURANT HOUSE STYLE
+   Colours are defined inside the demonstration only, so they
+   do not change the portfolio header, footer or other pages. */
+.restaurant-demo {
+    --restaurant-background: #fff8eb;
+    --restaurant-surface: #f2e5ce;
+    --restaurant-green: #203e35;
+    --restaurant-text: #28382e;
+    --restaurant-muted: #596151;
+    --restaurant-accent: #a63e2b;
+    --restaurant-accent-hover: #803020;
+    --restaurant-border: #c8b99e;
+
+    margin-top: 3rem;
+    border: 2px solid var(--restaurant-green);
+    border-radius: 12px;
+
+    background-color: var(--restaurant-background);
+    color: var(--restaurant-text);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Serif headings give the restaurant its own identity.
+   Body text remains in a readable sans-serif font. */
+.restaurant-demo h2,
+.restaurant-demo h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+/* Default restaurant links use the terracotta accent. */
+.restaurant-demo a {
+    color: var(--restaurant-accent);
+}
+
+/* Keyboard focus remains clearly visible within the restaurant. */
+.restaurant-demo a:focus-visible,
+.restaurant-demo button:focus-visible,
+.restaurant-demo input:focus-visible,
+.restaurant-demo select:focus-visible,
+.restaurant-demo textarea:focus-visible {
+    outline: 3px solid var(--restaurant-accent);
+    outline-offset: 4px;
+}
+
+/* RESTAURANT HEADER
+   Forest green and ivory distinguish it from the portfolio bar. */
+.restaurant-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 4px solid var(--restaurant-accent);
+    border-radius: 10px 10px 0 0;
+    background-color: var(--restaurant-green);
+    color: var(--restaurant-background);
+    text-align: center;
+}
+
+.restaurant-header .restaurant-name {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+/* Restaurant navigation wraps naturally on smaller screens. */
+.restaurant-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.restaurant-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.55rem 1.1rem;
+
+    border: 1px solid var(--restaurant-background);
+    border-radius: 4px;
+
+    color: var(--restaurant-background);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.restaurant-nav a:hover,
+.restaurant-nav a:focus-visible {
+    background-color: var(--restaurant-background);
+    color: var(--restaurant-green);
+}
+
+.restaurant-nav a:focus-visible {
+    outline-color: var(--restaurant-background);
+}
+
+/* OPENING SECTION
+   The warm background contrasts with the green restaurant header. */
+.restaurant-demo .restaurant-hero {
+    margin-top: 0;
+    padding: clamp(2.5rem, 7vw, 5rem) 1.5rem;
+    background-color: var(--restaurant-surface);
+    text-align: center;
+}
+
+.restaurant-demo .restaurant-label {
+    margin: 0 0 1rem;
+    color: var(--restaurant-accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.restaurant-hero h2 {
+    margin-bottom: 1.25rem;
+    color: var(--restaurant-green);
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.15;
+}
+
+.restaurant-hero p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.restaurant-hero .button {
+    margin-top: 0.75rem;
+}
+
+.restaurant-demo-note {
+    margin-top: 1.5rem;
+    color: var(--restaurant-muted);
+    font-size: 0.85rem;
+}
+
+/* RESTAURANT BUTTONS
+   Keep the shared button sizing but override its colours
+   and shape only when it appears inside the restaurant. */
+.restaurant-demo .button {
+    border-color: var(--restaurant-accent);
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.restaurant-demo .button-primary {
+    background-color: var(--restaurant-accent);
+    color: var(--restaurant-background);
+}
+
+.restaurant-demo .button-primary:hover {
+    border-color: var(--restaurant-accent-hover);
+    background-color: var(--restaurant-accent-hover);
+}
+
+.restaurant-demo .button-secondary {
+    background-color: transparent;
+    color: var(--restaurant-accent);
+}
+
+.restaurant-demo .button-secondary:hover {
+    background-color: var(--restaurant-surface);
+}
+
+/* CONTENT SECTIONS
+   These rules also apply when we populate the menu and form. */
+.restaurant-demo .restaurant-section {
+    margin-top: 0;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--restaurant-border);
+    scroll-margin-top: 1rem;
+}
+
+.restaurant-section h2 {
+    color: var(--restaurant-green);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.restaurant-section h3 {
+    color: var(--restaurant-green);
+    font-size: 1.4rem;
+}
+
+/* Future form controls inherit the restaurant's body font. */
+.restaurant-demo input,
+.restaurant-demo select,
+.restaurant-demo textarea,
+.restaurant-demo button {
+    font: inherit;
+}
+
+/* RESTAURANT MENU
+   Cards automatically stack when the available width is limited. */
+.restaurant-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+    );
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.restaurant-menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--restaurant-border);
+    border-radius: 8px;
+    background-color: var(--restaurant-background);
+}
+
+.restaurant-menu-item h3 {
+    margin: 0 0 0.75rem;
+}
+
+.restaurant-menu-item p {
+    margin: 0 0 1rem;
+}
+
+/* Text labels communicate dietary options without relying on colour. */
+.restaurant-menu-item .restaurant-dietary {
+    color: var(--restaurant-green);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Auto margin aligns prices towards the bottom of each card. */
+.restaurant-menu-item .restaurant-price {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    color: var(--restaurant-accent);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.restaurant-menu-note {
+    margin-top: 1.5rem;
+    color: var(--restaurant-muted);
+    font-size: 0.9rem;
+}
+
+/* OFFER PANEL
+   A contrasting background draws attention to the promotion. */
+.restaurant-offer {
+    padding: 1.5rem;
+    border-left: 5px solid var(--restaurant-accent);
+    border-radius: 4px;
+    background-color: var(--restaurant-surface);
+}
+
+.restaurant-offer h3 {
+    margin-top: 0;
+}
+
+.restaurant-offer .button {
+    margin-top: 0.5rem;
+}
+
+/* Booking form: keep fields readable and contained within the restaurant demo. */
+.restaurant-demo #booking-form {
+    max-width: 640px;
+    margin-top: 1.5rem;
+}
+
+.restaurant-demo .booking-field {
+    margin-bottom: 1.25rem;
+}
+
+.restaurant-demo .booking-field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+/* Full-width controls adapt to the available space on smaller screens. */
+.restaurant-demo .booking-field input,
+.restaurant-demo .booking-field select,
+.restaurant-demo .booking-field textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem;
+    border: 1px solid var(--restaurant-border);
+    border-radius: 4px;
+    background-color: var(--restaurant-background);
+    color: var(--restaurant-text);
+    font: inherit;
+}
+
+.restaurant-demo .booking-field textarea {
+    resize: vertical;
+}
+
+.restaurant-demo .booking-help {
+    margin-top: 0.5rem;
+    color: var(--restaurant-muted);
+    font-size: 0.9rem;
+}
+
+.restaurant-demo #booking-submit {
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+
+/* The button remains unavailable until its JavaScript is ready. */
+.restaurant-demo #booking-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.restaurant-demo #booking-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Restaurant photographs: consistent proportions and responsive sizing.*/
+.restaurant-demo .restaurant-food-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Leave space between each menu photograph and its pizza heading. */
+.restaurant-demo .restaurant-menu-item .restaurant-food-image {
+    margin-bottom: 1rem;
+}
+
+/* The offer photograph and text sit beside each other on wider screens.
+   They stack automatically when the available space becomes narrower. */
+.restaurant-demo .restaurant-offer-layout {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 260px), 1fr)
+    );
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* BUSINESS SHOWCASE
+   Full-width project cards keep the longer explanations easy to read. */
+.showcase-intro {
+    max-width: 75ch;
+    color: var(--muted);
+}
+
+.page-main .showcase-project {
+    margin-top: 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--muted);
+    border-top: 4px solid var(--accent);
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* A short category helps visitors identify the type of project. */
+.showcase-category {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Definition-list headings provide consistent labels across projects. */
+.showcase-details {
+    margin: 1.5rem 0 0;
+}
+
+.showcase-details dt {
+    margin-top: 1.25rem;
+    font-weight: 700;
+}
+
+.showcase-details dt:first-child {
+    margin-top: 0;
+}
+
+.showcase-details dd {
+    max-width: 85ch;
+    margin: 0.35rem 0 0;
+}
+
+/* Highlight the restaurant's design explanation within its project card. */
+.showcase-rationale {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border-radius: 6px;
+    background-color: var(--soft-accent);
+}
+
+.showcase-rationale h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.showcase-rationale ul {
+    max-width: 85ch;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.showcase-rationale li + li {
+    margin-top: 0.8rem;
+}

@@ -26,18 +26,15 @@ showcase.
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- Allows the layout to adapt to different screen sizes. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Change the description and browser-tab title for each page. -->
-    <meta name="description" content="PAGE DESCRIPTION">
-    <title>Daniel | PAGE NAME</title>
+    <meta name="description"
+          content="Daniel's academic projects in web development, database design and business planning.">
 
-    <!-- All five pages share the same stylesheet. -->
+    <title>Daniel | Business Showcase</title>
+
+    <!-- Reuse the portfolio's shared stylesheet and JavaScript. -->
     <link rel="stylesheet" href="StyleSheet.css">
-
-    <!-- Loads the JavaScript without blocking the HTML from being read. -->
     <script src="Javascript.js" defer></script>
 </head>
 
@@ -48,9 +45,10 @@ showcase.
         <div class="container header-inner">
 
             <nav class="site-nav" aria-label="Main navigation">
-                <!-- Add aria-current="page" to this page's link only. -->
                 <a href="index.html">Home</a>
-                <a href="BusinessShowcase.html">Business Showcase</a>
+                <a href="BusinessShowcase.html" aria-current="page">
+                    Business Showcase
+                </a>
                 <a href="Contact.html">Contact</a>
                 <a href="ProblemSolving.html">Problem Solving</a>
                 <a href="Skills.html">Skills</a>
@@ -59,20 +57,245 @@ showcase.
         </div>
     </header>
 
-    <!-- PAGE CONTENT
-         Replace this area with content specific to each page.
-         Keep the shared header and footer consistent. -->
     <main id="main-content" class="page-main">
         <div class="container">
 
-            <h1>PAGE NAME</h1>
-            <p>A short introduction to this page.</p>
+            <h1>Business Showcase</h1>
 
-            <!-- Add sections below as needed.
-                 Use h2 headings for sections beneath the main h1. -->
-            <section aria-labelledby="section-one-title">
-                <h2 id="section-one-title">SECTION HEADING</h2>
-                <p>Add the content for this section here.</p>
+            <p class="showcase-intro">
+                These academic projects demonstrate how I have applied
+                technical knowledge, analytical thinking and teamwork
+                to different challenges. Each example explains my
+                contribution, the approach taken and what I learned.
+            </p>
+
+            <!-- PROJECT ONE: The restaurant case study is a required showcase. -->
+            <section class="showcase-project"
+                     aria-labelledby="restaurant-project-title">
+
+                <p class="showcase-category">Web development</p>
+
+                <h2 id="restaurant-project-title">
+                    Brick Oven Pizza: digital transformation
+                </h2>
+
+                <!-- A definition list pairs each project requirement
+                     with its explanation. -->
+                <dl class="showcase-details">
+
+                    <dt>My role</dt>
+                    <dd>
+                        Student developer for the restaurant prototype,
+                        taking the role of Chief Technology Officer
+                        within the assignment's fictional business scenario.
+                    </dd>
+
+                    <dt>The problem</dt>
+                    <dd>
+                        Brick Oven Pizza needs to improve its online presence
+                        and make information easier for customers to access.
+                        Relying on printed menus and telephone enquiries
+                        limits how easily customers can explore prices,
+                        discover offers and request a table.
+                    </dd>
+
+                    <dt>My solution</dt>
+                    <dd>
+                        I developed a restaurant demonstration within my
+                        portfolio using HTML, CSS and JavaScript. It includes
+                        an online menu, a promotional offer and a booking
+                        request form. The form checks the customer's details
+                        and prepares an email containing their request.
+                    </dd>
+
+                    <dt>Outcome</dt>
+                    <dd>
+                        The prototype demonstrates a customer journey from
+                        browsing the menu to preparing a booking request.
+                        Providing clear information online could reduce
+                        routine enquiries and support customer engagement.
+                        These are expected benefits: the restaurant is
+                        fictional, and no business results have been measured.
+                        The prototype does not check live availability or
+                        confirm reservations.
+                    </dd>
+
+                    <dt>Skills and approaches used</dt>
+                    <dd>
+                        HTML5, CSS3, JavaScript, responsive layouts,
+                        form validation, accessible labels, business
+                        requirements analysis and GitHub version control.
+                    </dd>
+
+                </dl>
+
+                <!-- Explain why the page was designed this way,
+                     rather than only describing its features. -->
+                <div class="showcase-rationale">
+
+                    <h3>Development rationale</h3>
+
+                    <ul>
+                        <li>
+                            <strong>One page with section links:</strong>
+                            keeping the restaurant demonstration on the
+                            Problem-Solving page meets the five-page limit.
+                            Its navigation links move visitors directly to
+                            the relevant sections.
+                        </li>
+
+                        <li>
+                            <strong>A clear customer journey:</strong>
+                            the menu and offer appear before the booking form,
+                            allowing visitors to explore their options before
+                            deciding whether to request a table.
+                        </li>
+
+                        <li>
+                            <strong>A separate restaurant identity:</strong>
+                            different colours and fonts distinguish the
+                            demonstration from the portfolio. Restaurant
+                            styles are scoped to its own container so they
+                            do not change the appearance of the other pages.
+                        </li>
+
+                        <li>
+                            <strong>Accessible, flexible presentation:</strong>
+                            labelled form controls, descriptive image text,
+                            visible keyboard focus and flexible layouts
+                            support visitors using different devices and
+                            ways of navigating.
+                        </li>
+
+                        <li>
+                            <strong>Email-based booking requests:</strong>
+                            browser validation and JavaScript check details
+                            before preparing an email. A text preview also
+                            allows the message to be copied if an email
+                            application is unavailable. This demonstrates
+                            the process without requiring a live database.
+                        </li>
+                    </ul>
+
+                </div>
+
+                <a class="button button-primary"
+                   href="ProblemSolving.html">
+                    Explore the restaurant prototype
+                </a>
+
+            </section>
+
+            <!-- PROJECT TWO: Based on the database assignment in my CV. -->
+            <section class="showcase-project"
+                     aria-labelledby="database-project-title">
+
+                <p class="showcase-category">Database design</p>
+
+                <h2 id="database-project-title">
+                    Relational database assignment
+                </h2>
+
+                <dl class="showcase-details">
+
+                    <dt>My role</dt>
+                    <dd>
+                        Student completing a university assignment
+                        involving relational database design.
+                    </dd>
+
+                    <dt>The problem</dt>
+                    <dd>
+                        The assignment required a set of requirements to be
+                        translated into an organised database structure.
+                        This involved identifying what information belonged
+                        in each table and how the tables should relate
+                        to one another.
+                    </dd>
+
+                    <dt>My solution</dt>
+                    <dd>
+                        I used entity-relationship diagrams to plan the
+                        structure, applied normalisation principles to
+                        organise the data and used SQL to support the
+                        design of tables and their relationships.
+                    </dd>
+
+                    <dt>Outcome</dt>
+                    <dd>
+                        I developed a relational database design and
+                        strengthened my ability to analyse requirements
+                        and approach technical problems logically. The
+                        assignment helped me understand how clear data
+                        structures support the organisation of information.
+                    </dd>
+
+                    <dt>Skills and approaches used</dt>
+                    <dd>
+                        SQL, entity-relationship diagrams, relational
+                        database design, normalisation, requirements
+                        analysis and logical problem-solving.
+                    </dd>
+
+                </dl>
+
+            </section>
+
+            <!-- PROJECT THREE: Describe my contribution within the group. -->
+            <section class="showcase-project"
+                     aria-labelledby="drone-project-title">
+
+                <p class="showcase-category">Business planning and teamwork</p>
+
+                <h2 id="drone-project-title">
+                    AI drone business proposal
+                </h2>
+
+                <dl class="showcase-details">
+
+                    <dt>My role</dt>
+                    <dd>
+                        University group member who took on additional
+                        organisational responsibilities when participation
+                        within the team became uneven.
+                    </dd>
+
+                    <dt>The problem</dt>
+                    <dd>
+                        Our group needed to develop a business proposal
+                        for a fictional AI-powered drone company.
+                        We had to consider financial planning,
+                        cybersecurity and operational risks while
+                        coordinating the work across the team.
+                    </dd>
+
+                    <dt>My solution</dt>
+                    <dd>
+                        I helped coordinate communication and redistribute
+                        outstanding tasks so the group could continue
+                        developing the proposal. This required adapting
+                        to changes in participation and supporting a
+                        shared understanding of the remaining work.
+                    </dd>
+
+                    <dt>Outcome</dt>
+                    <dd>
+                        I contributed towards a completed business proposal
+                        and group presentation. The experience developed
+                        my teamwork, adaptability and organisational skills,
+                        and showed me the importance of clear responsibilities
+                        in collaborative projects.
+                    </dd>
+
+                    <dt>Skills and approaches used</dt>
+                    <dd>
+                        Teamwork, communication, task coordination,
+                        adaptability, business planning and awareness
+                        of financial, cybersecurity and operational risks.
+                    </dd>
+
+                </dl>
+
             </section>
 
         </div>
@@ -81,12 +304,15 @@ showcase.
     <!-- SHARED FOOTER -->
     <footer class="site-footer">
         <div class="container footer-inner">
+
             <p>&copy; 2026 Daniel. Personal portfolio.</p>
+
             <p>
                 University of Salford
                 <span aria-hidden="true">/</span>
                 Business &amp; IT
             </p>
+
         </div>
     </footer>
 
